@@ -18,7 +18,7 @@ cyan = '\033[46m'
 lightgrey = '\033[47m'
 clear = '\033[0m'
 lgreen = '\033[92m'
-
+os.system("clear")
 banner = lgreen+'''
 
  ,ggg,         gg                                                              
@@ -41,3 +41,53 @@ Version: v1.0.0         Developed By: YumikoBots         Owner: Santhu Tech
 '''+clear
 print(" ")
 print(banner)
+
+def clear_screen():
+    if os.name == 'nt': 
+        _ = os.system('cls')
+    else:  # For Linux and Mac
+        _ = os.system('clear')
+
+def show_options():
+    print(blue+"Welcome to the Terminal!")
+    print(cyan+"Please select an option:")
+    print(orange+"1. Telegram")
+    print(lgreen+"2. Instagram")
+    print(purple+"3. Whatsapp")
+    print(cyan+"4. Bruteforce")
+    print(green+"5. Exit")
+
+def telegram():
+    print("Launching Telegram...")
+
+def instagram():
+    print("Launching Instagram...")
+
+def whatsapp():
+    print("Launching Whatsapp...")
+
+def bruteforce():
+    print("Launching Bruteforce...")
+
+clear_screen()
+while True:
+    show_options()
+    choice = input("Enter your choice (1-5): ")
+
+    if choice == "1":
+        telegram()
+    elif choice == "2":
+        instagram()
+    elif choice == "3":
+        whatsapp()
+    elif choice == "4":
+        bruteforce()
+    elif choice == "5":
+        print("Exiting the Terminal...")
+        break
+    else:
+        print("Invalid choice. Please try again.")
+
+    input("Press Enter to continue...")
+    clear_screen()
+
