@@ -125,7 +125,7 @@ def instagram():
 
 clear_screen()
 while True:
-    show_options("Main Menu", ["Telegram", "Instagram", "WhatsApp", "Brute Force", "Exit"])
+    show_options("Main Menu", ["Telegram", "Instagram", "WhatsApp", "Brute Force"])
     choice = input("Enter your choice (1-5): ")
 
     if choice == "1":
@@ -138,8 +138,6 @@ while True:
     elif choice == "4":
         print("Launching Bruteforce...")
         input("Press Enter to continue...")
-    elif choice == "5":
-        print("Exiting the Terminal...")
         break
     else:
         print("Invalid choice. Please try again.")
