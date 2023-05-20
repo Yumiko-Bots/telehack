@@ -28,6 +28,14 @@ lgreen = '\033[92m'
 os.system("clear")
 banner = lgreen+'''
 
+                         __.oOo.__
+                        /'(  _  )`\
+                       / . \/^\/ . \
+                      /  _)_`-'_(_  \
+                     /.-~   ).(   ~-.\
+                    /'     /\_/\     `\
+                         . "-V-"
+
  ,ggg,         gg                                                              
 dP""Y8a        88                                       ,dPYb,                 
 Yb, `88        88                                       IP'`Yb                 
@@ -64,21 +72,60 @@ def show_options():
     print(cyan+"4. Bruteforce")
     print(green+"5. Exit")
 
-def telegram():
-    print("Launching Telegram...")
-
-def instagram():
-    print("Launching Instagram...")
-
 def whatsapp():
     print("Launching Whatsapp...")
 
 def bruteforce():
     print("Launching Bruteforce...")
 
+def telegram():
+    while True:
+        clear_screen()
+        show_options("Telegram", ["Login", "Add Members", "Delete Groups", "Hack Accounts", "Back"])
+        choice = input("Enter your choice (1-5): ")
+        if choice == "1":
+            print("Launching Telegram Login...")
+            input("Press Enter to continue...")
+        elif choice == "2":
+            print("Launching Telegram Add Members...")
+            input("Press Enter to continue...")
+        elif choice == "3":
+            print("Launching Telegram Delete Groups...")
+            input("Press Enter to continue...")
+        elif choice == "4":
+            print("Launching Telegram Hack Accounts...")
+            input("Press Enter to continue...")
+        elif choice == "5":
+            print("Going back to the main menu...")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+            input("Press Enter to continue...")
+
+def instagram():
+    while True:
+        clear_screen()
+        show_options("Instagram", ["Brute Force Passwords", "Account Hack", "Gather Account Info", "Back"])
+        choice = input("Enter your choice (1-4): ")
+        if choice == "1":
+            print("Launching Instagram Brute Force Passwords...")
+            input("Press Enter to continue...")
+        elif choice == "2":
+            print("Launching Instagram Account Hack...")
+            input("Press Enter to continue...")
+        elif choice == "3":
+            print("Launching Instagram Gather Account Info...")
+            input("Press Enter to continue...")
+        elif choice == "4":
+            print("Going back to the main menu...")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+            input("Press Enter to continue...")
+
 clear_screen()
 while True:
-    show_options()
+    show_options("Main Menu", ["Telegram", "Instagram", "WhatsApp", "Brute Force", "Exit"])
     choice = input("Enter your choice (1-5): ")
 
     if choice == "1":
@@ -86,9 +133,11 @@ while True:
     elif choice == "2":
         instagram()
     elif choice == "3":
-        whatsapp()
+        print("Launching WhatsApp...")
+        input("Press Enter to continue...")
     elif choice == "4":
-        bruteforce()
+        print("Launching Bruteforce...")
+        input("Press Enter to continue...")
     elif choice == "5":
         print("Exiting the Terminal...")
         break
@@ -97,4 +146,3 @@ while True:
 
     input("Press Enter to continue...")
     clear_screen()
-
