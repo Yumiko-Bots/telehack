@@ -57,6 +57,11 @@ Version: v1.0.0         Developed By: YumikoBots         Owner: Santhu Tech
 print(" ")
 print(banner)
 
+def show_options(title, options):
+    print(title)
+    for i, option in enumerate(options):
+        print(f"{i+1}. {option}")
+
 def clear_screen():
     if os.name == 'nt': 
         _ = os.system('cls')
