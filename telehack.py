@@ -17,8 +17,9 @@ purple = '\033[45m'
 cyan = '\033[46m'
 lightgrey = '\033[47m'
 clear = '\033[0m'
+lgreen = '\033[92m'
 
-banner = orange+'''
+banner = lgreen+'''
 
  ,ggg,         gg                                                              
 dP""Y8a        88                                       ,dPYb,                 
@@ -37,6 +38,6 @@ Yb, `88        88                                       IP'`Yb
         Y8,_ _,88                                                              
          "Y888P"  
 Version: v1.0.0         Developed By: YumikoBots         Owner: Santhu Tech
-'''+purple
+'''+clear
 print(" ")
 print(banner)
