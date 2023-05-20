@@ -113,9 +113,9 @@ def instagram():
         if choice == "1":
             print("Launching Instagram Brute Force Passwords...")
             username = input('Username: ')
-            dictionary = input('Choose Dictionary: ')
+            password = input('Choose Dictionary: ')
 
-            file = open(f'{dictionary}.txt', 'r')
+            file = open(f'{password}.txt', 'r')
             bruteforce = []
             for line in file:
                 line = line.strip()
