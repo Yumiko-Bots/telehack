@@ -63,15 +63,6 @@ def clear_screen():
     else:  # For Linux and Mac
         _ = os.system('clear')
 
-def show_options():
-    print(blue+"Welcome to the Terminal!")
-    print(cyan+"Please select an option:")
-    print(orange+"1. Telegram")
-    print(lgreen+"2. Instagram")
-    print(purple+"3. Whatsapp")
-    print(cyan+"4. Bruteforce")
-    print(green+"5. Exit")
-
 def whatsapp():
     print("Launching Whatsapp...")
 
