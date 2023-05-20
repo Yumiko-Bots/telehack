@@ -2,3 +2,5 @@ pyrogram
 telethon
 TgCrypto
 asyncio
+webbot==0.34
+pynput==1.7.1
