@@ -2,7 +2,7 @@ from pyrogram import Client as yumiko, filters as filt
 import os
 import time
 from webbot import Browser
-from pynput.keyboard import Key, Controller
+from pynput import *
 
 API_ID = 9276915
 API_HASH = "e8145ec48504292485900892fffaf890"
