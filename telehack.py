@@ -19,7 +19,7 @@ lightgrey = '\033[47m'
 clear = '\033[0m'
 lgreen = '\033[92m'
 
-banner = lgreen+'''
+banner = orange+'''
 
  ,ggg,         gg                                                              
 dP""Y8a        88                                       ,dPYb,                 
