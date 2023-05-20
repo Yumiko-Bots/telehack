@@ -120,12 +120,14 @@ def instagram():
             input("Press Enter to continue...")
 
 clear_screen()
+menu_options = ["Telegram", "Instagram", "WhatsApp", "Brute Force"]
 while True:
-    show_options("Main Menu", ["Telegram", "Instagram", "WhatsApp", "Brute Force"])
-    choice = input("Enter your choice (1-5): ")
+    show_options("Main Menu", menu_options)
+    choice = input("Enter your choice (1-{}): ".format(len(menu_options)))
 
     if choice == "1":
         telegram()
+        menu_options.remove("Telegram")
     elif choice == "2":
         instagram()
     elif choice == "3":
